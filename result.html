@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1.0,user-scalable=no">
+    <title>三联年货联合国航，邀请吃货来PK</title>
+    <link rel="stylesheet" href="css/result.css">
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?6b6cbb191fb65381476008317f723588";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+
+</head>
+<body>
+  <div class="content">
+      <div class="title">
+          <img class="text1" src="images/result/ling_text_1.png" alt="">
+      </div>
+      <div class="securities">
+          <img class="ticket" src="images/result/ling_ticket_title.png" alt="">
+      </div>
+      <div class="form">
+          <img class="text3" src="images/result/ling_text_3.png" alt="">
+          <!--<img class="input_box" src="images/result/ling_text_input_box.png" alt="">-->
+          <input type="number"  id="phone">
+          <div class="btn_bg">
+              <img class="btn" id="btn" src="images/result/button_text_2.png">
+          </div>
+      </div>
+      <div class="introduced">
+          <div class="top">
+          </div>
+          <div class="box">
+          <div class="itd-title">
+              代金卷使用规则
+          </div>
+          <p>1. 代金券仅限注册用户本人购票使用，不可与其他代金券同时使用，不得在单次购票中叠加使用。</p>
+          <p>2.  购票渠道：中国国航APP</p>
+          <p>3. 机票购买日期：2017.1.10-2017.5.31。</p>
+          <p>4. 机票旅行日期：2017.3.1-2017.4.29；2017.5.1-2017.5.31。</p>
+          <p>5. 适用航线：国航实际承运且挂CA代号的北京始发国内、国际及地区航线航班。</p>
+          <p>6. 适用舱位：国内：经济舱（Y/B/M/U/H/Q/V/W/S）；
+              国际：公务舱（J/C/D/Z/R）；经济舱：（Y/B/M/U/H/Q/V/W/S/T/L）。如遇国航舱位价格调整，以调整后舱位为准。
+          </p>
+          <p>7. 适用航程类型：单程、往返。</p>
+          <p>8. 适用客户：仅适用成人（婴儿、儿童不适用）。</p>
+          <p>9. 其他规则可在兑换成功后点开代金券进行查看。</p>
+      </div>
+      <div class="toast" id="success">
+          <div class="top_img">
+              <img src="images/result/ling_success.png" alt="" id="top_img">
+          </div>
+          <div class="prompt" id="prompt">
+              亲，国际、国内各30元机票代金券邀请码已经发到您手机上了，请不要忘记到中国国航APP兑换使用哦！
+          </div>
+          <div class="yes">知道了</div>
+      </div>
+      </div>
+  </div>
+  <script src="http://cdn.staticfile.org/jquery/2.0.3/jquery.min.js"></script>
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script src="js/result.js"></script>
+  <script>
+      $(document).ready(function() {
+          $.ajax({
+              url: "http://carnival.songguolife.com/weChatPay/share",
+              data: {
+                  url: location.href.split("#")[0]
+              },
+              dataType: "jsonp",
+              jsonp: "jsonpcallback"
+          }).success(function(n) {
+
+              wx.config({
+//                      debug: true,
+                      appId: n.appId,
+                      timestamp: n.timestamp,
+                      nonceStr: n.noncestr,
+                      signature: n.signature,
+                      jsApiList: ["onMenuShareTimeline", "onMenuShareAppMessage"]
+                  },
+                  wx.ready(function() {
+                      console.log('jinsdscdc');
+                      var m = "食神型吃货",
+                          e = "来自五湖四海的十种年货小吃，看看你是几级吃货？",
+                          t = "http://carnival.songguolife.com/AirChinaSms",
+                          a = "http://carnival.ufile.ucloud.com.cn/AirChinaSMS/images/share.png";
+                      // configWxshare(m, e, t, a, null);
+                      wx.onMenuShareTimeline({
+                              title: e,
+                              link: t,
+                              imgUrl: a,
+                              success: function() {
+                                  console.log("分享");
+//                    _hmt.push(["_trackEvent", "share", "Timeline", "分享到朋友圈"]),
+//                    i && i()
+                              },
+                              cancel: function() {}
+                          },
+                          wx.onMenuShareAppMessage({
+                              title: m,
+                              desc: e,
+                              link: t,
+                              imgUrl: a,
+                              type: "",
+                              dataUrl: "",
+                              success: function() {
+                                  console.log("分享2");
+//                    _hmt.push(["_trackEvent", "share", "AppMessage", "分享给好友"]),
+//                    i && i()
+                              },
+                              cancel: function() {}
+                          }))
+
+                  }))
+          })
+      });
+  </script>
+</body>
+</html>

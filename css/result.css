@@ -1,0 +1,151 @@
+.content{
+    width: 100%;
+    position: absolute;
+    top:0;
+    left: 0;
+    background-color:#b19476;
+}
+.title{
+    width: 100%;
+    height: 106px;
+    background: url("../images/result/ling_bg_purple.png") no-repeat;
+    background-size: 100% 106px;
+}
+.title .text1{
+    width: 190px;
+    height: 29px;
+    display: block;
+    margin: 0 auto;
+    padding: 26px 0 12px 0;
+}
+.securities{
+    margin-top: -44px;
+}
+.ticket{
+    width: 87.2%;
+    height: 73px;
+    display: block;
+    margin: 0 auto;
+}
+.form{
+    margin: 36px auto;
+}
+.form .text3{
+    width: 60%;
+    height: 14px;
+    display: block;
+    margin: 0 auto;
+}
+.form input{
+    width: 57.6%;
+    height: 44px;
+    margin: 19px auto;
+    display: block;
+    outline: none;
+    box-sizing: border-box;
+    background: url("../images/result/ling_text_input_box.png") no-repeat;
+    background-size: 100% 44px;
+    border: none;
+    padding-left: 10px;
+}
+.form .btn_bg{
+    width: 58.4%;
+    height: 45px;
+    line-height: 45px;
+    display: block;
+    margin: 3px auto;
+    margin-bottom: 22px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    vertical-align: middle;
+    outline: none;
+    background: url("../images/result/ling_button_disabled.png") no-repeat;
+    background-size: 100% 59px;
+    padding-top: 14px;
+}
+.form img.btn{
+    width: 88px;
+    height: 22px;
+    display: block;
+    margin: 0 auto;
+}
+.introduced .box{
+    background: #d8c9bb;
+    padding-top: 42px;
+    margin-top: -2px;
+    padding-bottom: 5px;
+}
+.introduced .top{
+    width: 100%;
+    height: 10px;
+    background: url("../images/result/ling_circle.png") no-repeat;
+    background-size: contain;
+}
+.introduced .itd-title{
+    margin: 0 auto;
+    font-size: 15px;
+    font-weight: bold;
+    font-family:"Microsoft YaHei",'微软雅黑';
+    color:#4b1f19;
+    text-align: center;
+    margin-bottom: 21px;
+}
+.introduced p{
+    font-size: 14px;
+    color: #4b1f19;
+    font-family:"Microsoft YaHei",'微软雅黑';
+    line-height: 20px;
+    margin-bottom: 16px;
+    padding-left: 16px;
+    padding-right: 16px;
+    margin-top: 0;
+}
+.toast{
+    position: absolute;
+    top:92px;
+    left: 16%;
+    width: 64%;
+    /*height: 150px;*/
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    background: #fff;
+    display: none;
+}
+.toast .top_img{
+    width: 123%;
+    margin-top: -31px;
+    margin-left: -29px;
+}
+.toast .top_img img{
+    width: 100%;
+    height: 76px;
+    display: block;
+    margin: 0 auto;
+}
+.toast .prompt{
+    text-align: center;
+    width: 100%;
+    /*line-height: 48pt;*/
+    font-size: 14px;
+    padding-bottom: 17px;
+    margin-top: -10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    box-sizing: border-box;
+    color: #91594d;
+}
+.toast .yes{
+    text-align: center;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    height: 47px;
+    background: #e06042;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    line-height: 47px;
+}
